@@ -1,0 +1,40 @@
+<%- include('../header.ejs') %>
+<section class="login-wrap mtb-40">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="login-box">
+                    <h1>Display data</h1>
+                    <table class="table table-bordered text-black">
+                        
+                        <tr>
+                         <th>No.</th>
+                         <th>id</th>
+                          <th>Name</th>
+                          <th>Email</th>
+                          <th>Action</th>
+                        </tr>
+                        <% var i=1 %>
+                        <% data.forEach((item)=>{ %>
+                             <!-- console.log(item) -->
+                         <tr>
+                              <td><%= i++ %></td>
+                              <td><%= item._id %></td>
+                          <td><%= item.name %></td>
+                          <td><%= item.email %></td>
+                          <td>
+                            <a href="/curd/view/<%= item._id %>" class="btn btn-info">View</a>
+                            <a href="" class="btn btn-success">Edit</a>
+                            <a href="" class="btn btn-danger">Delete</a>
+                          </td>
+                        </tr>
+                    <% })%>
+                        
+                      </table>
+                </div>         
+            </div>
+        </div>
+    </div>
+</section>
+<%- include('../footer.ejs') %>
+

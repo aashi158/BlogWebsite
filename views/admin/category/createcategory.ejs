@@ -1,0 +1,46 @@
+<%- include('../../header.ejs') %>
+<section class="dashboard-wrap mtb-40">
+    <div class="container">
+        <div class="body-content">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="dash-left">
+                        <ul>
+                            <li class="active"><a href="/admin/dashboard">Dashboard</a></li>
+                            <li><a href="/admin/createblog">CREATE BLOGS</a></li>
+                            <li><a href="/admin/displayblog">DISPLAY BLOGS</a></li>
+                            <li><a href="/admin/createcategory">CREATE CATEGORIES</a></li>
+                            <li><a href="/admin/displaycategory">DISPLAY CATEGORIES</a></li>
+                            <li><a href="/contact">CONTACT</a></li>
+                            <li><a href="/about">Pages</a></li>
+                            <li><a href="/logout">Logout</a></li>
+                        </ul>
+                    </div>   
+                </div>
+                <div class="col-md-9">
+                    <div class="dash-right">
+                        <div class="dash-header">
+                          <div class="dash-title">
+                              <h1>Create Category</h1>
+                          </div>
+                        </div>
+                        <div class="blog-form">
+                          <form action="categoryinsert" method="post">
+                            <div class="form-group form-row">
+                                <label class="col-md-3">Category Name<span class="required">*</span></label>
+                                <div class="col-md-9">
+                                  <input type="text" name="catname" class="form-control" placeholder="Title" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                           </div>
+                          </form>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('../../footer.ejs') %>

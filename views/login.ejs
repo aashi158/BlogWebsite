@@ -1,0 +1,33 @@
+<%- include('./header.ejs') %>
+<section class="login-wrap mtb-40">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="login-box">
+                    <h1 style="font-family: 'mochiy pop one', sens-serif;">Adminstrator Login</h1>
+                    <%if(message.length > 0){ %>
+                        <div class="alert alert-success">
+                            <%=message %>
+                        </div>
+                    <% }%>
+                    <form action="/verifylogin" method="post">
+                        <div class="form-group">
+                            <input type="text" name="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                           <button class="btn btn-danger">Login</button>
+                        </div>
+                        <div class="form-group">
+                            <a href="/register" class="btn btn-success">Register</a>
+                        </div>
+                    </form>
+                </div>         
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('./footer.ejs') %>

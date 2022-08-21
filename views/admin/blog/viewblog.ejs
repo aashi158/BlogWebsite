@@ -1,0 +1,29 @@
+<%- include('../../header.ejs') %>
+<section class="login-wrap mtb-40">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="login-box">
+                    <h1>DISPLAY DATA</h1>
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>SNo</th>
+                            <th>id</th>
+                            <th>Title</th>
+                            <th>Description</th>  
+                        </tr>
+                        <% var i=1 %>
+                            <!-- console.log(item) -->
+                            <tr>
+                                <td><%= i++ %></td>
+                                <td><%= data._id %></td>
+                                <td><%= data.title %></td>
+                                <td><%= data.description %></td>
+                            </tr>
+                    </table>
+                </div>         
+            </div>
+        </div>
+    </div>
+</section>
+<%- include('../../footer.ejs') %>
