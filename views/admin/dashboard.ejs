@@ -1,28 +1,32 @@
 <%- include('../header.ejs') %>
 
-<section class="dashboard-wrap mtb-40">
+<section style="background-color: skyblue; margin: 20px;" 
+class="dashboard-wrap mtb-40">
     <div class="container">
         <div class="body-content">
             <div class="row">
                 <div class="col-md-3">
-                    <div class="dash-left">
-                        <ul>
-                            <li class="active"><a href="/admin/dashboard" class="active">Dashboard</a></li>
+                    <div class="dash-left" style="background-color: #4c94f8;
+                        margin-bottom: 5px;">
+                        <ul style="outline-style: inherit;">
+                            <li class="active"><a href="/admin/dashboard">DASHBOARD</a></li>
                             <li><a href="/admin/createblog">CREATE BLOGS</a></li>
                             <li><a href="/admin/displayblog">DISPLAY BLOGS</a></li>
-                            <li><a href="/admin/createcategory">CREATE CATEGORIES</a></li>
-                            <li><a href="/admin/displaycategory">DISPLAY CATEGORIES</a></li>
-                            <li><a href="/contact">CREATE CONTACT</a></li>
+                            <li><a href="/admin/category/createcategory">CREATE CATEGORY</a></li>
+                            <li><a href="/admin/category/displaycategory">DISPLAY CATEGORY</a></li>
+                            <!-- <li><a href="/curd/create">CREATE CURD</a></li>
+                            <li><a href="/curd/display">DISPLAY CURD</a></li> -->
+                            <li><a href="/admin/contact">CREATE CONTACT</a></li>
                             <li><a href="/admin/displaycontact">DISPLAY CONTACTS</a></li>
-                            <li><a href="/about">Pages</a></li>
-                            <li><a href="/logout">Logout</a></li>
+                            <li><a href="/about">ABOUT</a></li>
+                            <li><a href="/logout">LOGOUT</a></li>
                         </ul>
                     </div>   
                 </div>
                 <div class="col-md-9">
                     <div class="dash-right">
-                        <h1>Dashboard</h1>
-                        <b><p>Run by The Scientific American, The Sciences is a must-read, accessible take on science topics as far ranging as Mind, Health, Tech and Sustainability.</p></b>
+                        <h1 style="font-family: monospace; color: darkblue;">WELCOME: <%= n %></h1>
+                        <b><p style="font-family: monospace; color: darkblue;">Email: <%= e %><p></b>
                     </div>   
                 </div>
             </div>

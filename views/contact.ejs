@@ -1,11 +1,57 @@
 <%- include('./header.ejs') %>
 
-<section class="cmspage mtb-40">
-    <div class="container">
+<section style="background-color: rgb(248, 189, 129);" 
+class="cmspage mtb-40">
+  <div class="container">
+    <div class="body-content">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="dash-left" style="background-color: #4c94f8;
+                margin-bottom: 5px;">
+                <ul style="outline-style: inherit;">
+                    <li class="active"><a href="/admin/dashboard">DASHBOARD</a></li>
+                    <li><a href="/admin/createblog">CREATE BLOGS</a></li>
+                    <li><a href="/admin/displayblog">DISPLAY BLOGS</a></li>
+                    <li><a href="/admin/category/createcategory">CREATE CATEGORY</a></li>
+                    <li><a href="/admin/category/displaycategory">DISPLAY CATEGORY</a></li>
+                    <!-- <li><a href="/curd/create">CREATE CURD</a></li>
+                    <li><a href="/curd/display">DISPLAY CURD</a></li> -->
+                    <li><a href="/admin/contact">CREATE CONTACT</a></li>
+                    <li><a href="/admin/displaycontact">DISPLAY CONTACTS</a></li>
+                    <li><a href="/about">ABOUT</a></li>
+                    <li><a href="/logout">LOGOUT</a></li>
+                </ul>
+            </div>   
+        </div>
+            <div class="col-md-9">
+                <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(41, 80, 210); font-size: 40px;">Contact</h1>
+                <form action="/admin/contactinsert" method="post">
+                 <div class="form-group">
+                    <input type="text" name="name" class="form-control" placeholder="Name">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="email" class="form-control" placeholder="E-Mail">
+                  </div>
+                  <div class="form-group">
+                    <input type="text" name="phone" class="form-control" placeholder="Phone">
+                  </div>
+                  <div class="form-group">
+                    <textarea name="message" rows="5" class="form-control" placeholder="Message"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <button class="btn btn-success">Send Message</button>
+                  </div>
+                </form>
+              </div>
+        </div>
+    </div>
+  </div>
+</section>    
+    <!-- <div class="container">
       <div class="page-desc">
         <div class="row justify-content-center">
           <div class="col-md-6">
-            <h1>Contact</h1>
+            <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(41, 80, 210); font-size: 40px;">Contact</h1>
             <form action="/admin/contactinsert" method="post">
              <div class="form-group">
                 <input type="text" name="name" class="form-control" placeholder="Name">
@@ -26,8 +72,8 @@
           </div>
         </div>
       </div>
-    </div>
-</section>
+    </div> -->
+<!-- </section> -->
 
 
 <%- include('./footer.ejs') %>

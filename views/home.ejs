@@ -3,11 +3,12 @@
     <div class="banner-box">
         <div class="intro-text">
             <div class="intro-text-box">
-                <h1>BLOGS</h1>
-                <B><p>Improbable Research is all about making people laugh, and then think</p></B>
+               <h1 style="color: rgb(236, 15, 15); font-family: sans-serif; font-weight: bolder;">👩‍💻 BLOG 👩‍💻</h1>
+                <B><p style="width: 30%;margin: auto;background-color: rgb(194 25 25 / 60%);padding: 10px;
+                    border: 5px solid hsl(240, 69%, 3%);">Improbable Research is all about making people laugh, and then think</p></B>
             </div>
         </div>
-        <img src="https://img.freepik.com/premium-photo/mock-up-smart-phone-with-blank-screen-laptop-computer-notebook-coffee-cup-dark-stone-background-flat-lay_35674-15380.jpg?size=626&ext=jpg" width="450px" height="450px" alt="error loading img" />
+        <img src="/image/homepage.jpg" width="450px" height="450px" alt="error loading img" />
     </div>
 </section>
 <section class="featured-blog mtb-40">
@@ -15,7 +16,7 @@
         <div class="row">
             <% data.forEach((item)=>{ %>
                 <div class="col-md-4">
-                    <div class="blog-box shadow-lg p-3 mb-5 background-white rounded">
+                    <div class="blog-box shadow-lg p-3 mb-5  rounded">
                         <img src="/upload/<%= item.image %>" width="200px" height="150px" alt="blog1" />
                         <h3><%= item.title %></h3>
                         <p><%= item.description.slice(0, 90) %></p> 

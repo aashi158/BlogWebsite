@@ -5,7 +5,7 @@ class blogcontroller {
         res.render('admin/blog/createblog')
     }
     static bloginsert = async (req, res) => {
-        console.log(req.body)
+        // console.log(req.body)
         try {
             const { title, description, image } = req.body
             const result = new BlogModel({
@@ -53,7 +53,6 @@ class blogcontroller {
             console.log(err)
         }
     }
-
     static updateblog = async (req, res) => {
         // res.render('admin/blog/displayblog')
         // console.log(req.params.id)
@@ -73,7 +72,6 @@ class blogcontroller {
             console.log(err)
         }
     }
-
     static deleteblog = async (req, res) => {
         // res.render('admin/blog/displayblog')
         // console.log(req.params.id)

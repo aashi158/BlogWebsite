@@ -1,7 +1,9 @@
 const express = require('express');
 const multer =require('multer')
 const connectdb = require('./database/connectdb.js');
-const app = express()  // FUNCTION CREATE
+const cookieParser = require('cookie-parser')
+const app = express()            // FUNCTION CREATE
+app.use(cookieParser())           // for getting TOKEN
 const port = 3000
 
 var session = require('express-session');
@@ -14,7 +16,7 @@ app.use(session({
  }));
  
 app.use(flash())
-// npm body parser
+// npm body parser, used to take the data
 var bodyParser = require('body-parser')
 
 // create application/x-www-form-urlencoded parser

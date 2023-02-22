@@ -23,7 +23,7 @@ class ContactController{
     static contactdisplay = async(req,res) =>{ 
         try{
             const result = await ContactModel.find()
-            console.log(result)
+            // console.log(result)
             res.render('admin/contact/displaycontact',{data:result})    // data display on page   
         }catch(err){
             console.log(err)
