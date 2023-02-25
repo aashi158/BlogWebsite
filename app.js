@@ -4,7 +4,7 @@ const connectdb = require('./database/connectdb.js');
 const cookieParser = require('cookie-parser')
 const app = express()            // FUNCTION CREATE
 app.use(cookieParser())           // for getting TOKEN
-const port = 3000
+const port =  process.env.PORT || 3000
 
 var session = require('express-session');
 var flash = require('connect-flash');
